@@ -36,15 +36,15 @@ function writeHook(name, content) {
     });
 }
 
-fs.access(pathToHooksFolder, (err) => {
-    if (err) {
-        fs.mkdir(pathToHooksFolder, { recursive: true }, (err) => {
-            if (err) throw err;
-            writeHook('pre-commit.cjs', precommitTemplate);
-            writeHook('pre-commit', callerTemplate);
-        });
-    } else {
-        writeHook('pre-commit.cjs', precommitTemplate);
-        writeHook('pre-commit', callerTemplate);
-    }
-});
+//fs.access(pathToHooksFolder, (err) => {
+  //  if (err) {
+    //    fs.mkdir(pathToHooksFolder, { recursive: true }, (err) => {
+      //      if (err) throw err;
+        //    writeHook('pre-commit.cjs', precommitTemplate);
+          //  writeHook('pre-commit', callerTemplate);
+        //});
+    //} else {
+      //  writeHook('pre-commit.cjs', precommitTemplate);
+        //writeHook('pre-commit', callerTemplate);
+//    }
+//});
